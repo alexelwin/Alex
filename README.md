@@ -1,5 +1,5 @@
 //add new javascript dependencies with below..
-bower install <XXXXXX> --save-dev
+bower install <XXXXXX> --save
 
 //get packages if not already have. referenced from bower.json
 bower update

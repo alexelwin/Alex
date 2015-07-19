@@ -16,11 +16,8 @@
   "homepage": "http://alex.elwin.me",
   "description": "angular app",
   "dependencies": {
-    "angular-route": "~1.4.3",
+    "angular-ui-router": "~0.2.15",
     "angularjs": "~1.4.3",
-    "angular-ui": "~0.4.0"
-  },
-  "devDependencies": {
-    "angular-route": "~1.4.3"
+    "angular-bootstrap": "~0.13.0"
   }
 }
