@@ -1,0 +1,26 @@
+{
+  "name": "angular_app",
+  "version": "0.0.0",
+  "authors": [
+    "Alex Elwin <alex.elwin@melbourneit.com.au>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "http://alex.elwin.me",
+  "description": "angular app",
+  "dependencies": {
+    "angular-route": "~1.4.3",
+    "angularjs": "~1.4.3",
+    "angular-ui": "~0.4.0"
+  },
+  "devDependencies": {
+    "angular-route": "~1.4.3"
+  }
+}
