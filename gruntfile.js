@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['src/**/*.js'],
+        src: ['src/app/**/*.js'],
         dest: 'dist/<%= pkg.name %>.js'
       }
     },
@@ -21,11 +21,8 @@ module.exports = function(grunt) {
         }
       }
     },
-    qunit: {
-      files: ['test/**/*.html']
-    },
     jshint: {
-      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+      files: ['Gruntfile.js', 'src/app/**/*.js', '!src/app/components/**/*.js'],
       options: {
         // options here to override JSHint defaults
         globals: {
@@ -36,31 +33,22 @@ module.exports = function(grunt) {
         }
       }
     },
-    reload: {
-        port: 80,
-        proxy: {
-            host: 'alex',
-        }
-    },
+    
     watch: {
-      files: ['<%= jshint.files %>','index.html'],
-      tasks: ['jshint', 'qunit', 'reload']
+      options:{
+        livereload:true
+      },
+      files: ['<%= jshint.files %>', 'src/app/**/*.js', 'src/app/**/*.html', '!src/app/components/**/*.js'],
+      tasks: ['jshint']
     },
+
+    //MODULE: grunt-bower-install (insert dependencies into html pages)
     bowerInstall: {
  
-    target: {
-   
-      // Point to the files that should be updated when 
-      // you run `grunt bower-install` 
-      src: [
-        '*.html',   // .html support... 
-        '*.jade',   // .jade support... 
-        'main.scss',  // .scss & .sass support... 
-        'config.yml'         // and .yml & .yaml support out of the box! 
-      ],
+    target: { 
+      src: ['src/app/index.html'],
    
       // Optional: 
-      // --------- 
       cwd: '',
       dependencies: true,
       devDependencies: false,
@@ -74,13 +62,10 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-reload');
   grunt.loadNpmTasks('grunt-bower-install');
-  grunt.registerTask('test', ['jshint', 'qunit']);
-  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify','bowerInstall', 'watch']);
   
 
 };

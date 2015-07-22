@@ -2,7 +2,7 @@
 bower install <XXXXXX> --save
 
 //get packages if not already have. referenced from bower.json
-bower update
+"bower update" or "bower install" 
 
 //insert dependencies into 'index.html' via manual grunt task (TODO:add to build)
 grunt bowerInstall

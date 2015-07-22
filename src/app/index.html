@@ -1,0 +1,22 @@
+<html>
+<head>
+	 <!-- bower:js -->
+	 <script src="components/angular/angular.js"></script>
+	 <script src="components/angularjs/angular.js"></script>
+	 <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
+	 <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	 <!-- endbower -->
+	<script src="app.js" defer></script>
+	<script src="/controllers/popupCtrl.js" defer></script>
+	<script src="/controllers/homeCtrl.js" defer></script>
+</head>
+<body ng-app="alexApp">
+	 <a ui-sref="home">home</a>
+	 <a ui-sref="popup">popup</a> 
+	 <div ui-view></div>
+	 
+</body>
+</html>	
+	
+	
+	

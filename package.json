@@ -1,7 +1,7 @@
 {
-  "name": "angular_app",
+  "name": "alexApp",
   "version": "1.0.0",
-  "description": "app to learn angularjs",
+  "description": "AngularJS App",
   "main": "index.html",
   "scripts": {
     "test": "sdf"

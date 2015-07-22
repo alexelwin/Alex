@@ -3,16 +3,16 @@
  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,$urlRouterProvider) {
  	
  	var home={
- 		name: 'home'
- 		,url: '/home'
- 		,templateUrl: 'partials/partial-home.html'
- 		,controller: 'homeCtrl'
+ 		name: 'home',
+ 		url:'/home',
+ 		templateUrl: 'partials/partial-home.html',
+ 		controller: 'homeCtrl'
  	};
  	var popup={
- 		name: 'popup'
- 		,url: '/popup'
- 		,templateUrl: 'partials/partial-popup.html'
- 		,controller: 'popupCtrl'
+ 		name: 'popup',
+ 		url: '/popup',
+ 		templateUrl: 'partials/partial-popup.html',
+ 		controller: 'popupCtrl'
  	};
  	
  	$stateProvider.state(home);
